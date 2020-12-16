@@ -4,6 +4,7 @@
 # @Author  : kuangxiaojiang
 # @Site    : 
 # @File    : strStr.py
+
 '''
 注意：range(10),返回0-9
 当循环结束时，中途没有返回，则可以直接返回return -1
@@ -22,4 +23,4 @@ class Solution:
 s = Solution()
 str1 = 'abcde'
 str2 = 'defd'
-print(s.strStr(str1,str2))
+print(s.strStr(str1, str2))
