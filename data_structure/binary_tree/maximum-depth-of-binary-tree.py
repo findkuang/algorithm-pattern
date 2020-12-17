@@ -33,6 +33,7 @@ class Solution_A:
 #3. 二叉树层序遍历
 class Solution_B:
     def levelOrder(self, root):
+        '''广度搜索bfs'''
         rst = []
         if root is None:
             return rst
@@ -45,4 +46,3 @@ class Solution_B:
                 bfs.append(node.right)
             rst.append(node.value)
         return rst
-
