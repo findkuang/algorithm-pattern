@@ -62,7 +62,7 @@ class Solution:
         if root is None:
             return rst_list
         stack.append(root)
-        node = stack.pop()
+        node = root
         while len(stack) > 0 or node is not None:
             if node is not None:
                 stack.append(node.left)
@@ -79,5 +79,28 @@ class Solution:
         :param root:
         :return:
         '''
-        pass
+        stack = []
+        rst_list = []
+        if root is None:
+            return rst_list
+        stack.append(root)
+        node = root
+        while len(stack) > 0:
+            if node is not None:
+                stack.append(node)
+                node = node.left
+            else:
+                node = stack[-1]
+                if node.right is None:
+                    rst_list.append(node.value)
+                    stack.pop(node)
+                    node = node.right
+                else:
+                    stack.append(node.right)
+                    node = node.right
+        return rst_list
+
+
+
+
 
